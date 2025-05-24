@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TECHNICAL_DOCUMENT</title>
+    <link rel="stylesheet" href="docu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+     integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <style>
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 400;
+    line-height: 1.4;
+    scroll-behavior: smooth;
+    align-items: right;
+    display: flex;
+    height: 100vh;
+    transition: background-color 0.3s ease;
+    background-color: white;
+}  
+ 
+.icon {
+    font-size: 24px;
+    cursor: pointer;
+ 
+}
+#moon{
+  color: #333;
+}
+#sun{
+  color: gold;
+}
+body.dark {
+    background-color: #333;
+}
+
+body.dark #moon {
+    visibility: hidden;
+}
+
+body.dark #sun {
+    visibility: visible;
+}
+
+a{
+    text-decoration-line: none;
+    margin: 0;
+}
+ 
+header{
+    border: 1px,solid #ccc;
+    height: 100vh;
+}
+div{
+    border: 1px solid gray;
+    border-radius: 30px;
+    box-shadow: gray;
+}
+nav{
+  
+  position: fixed;
+  overflow: hidden;
+   
+}
+nav h1{
+    font-size: 30px;
+    font-weight: 400;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    padding-left: 50PX;
+    padding-right: 50PX;
+    text-shadow:2% grey;
+}
+nav ul{
+    list-style: none;
+}
+nav ul li{
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    color: black;
+    border-radius: 20px;
+}
+nav ul li:hover{
+    background:gray;
+    transition:0.3s ease-in-out;
+}
+main{
+    padding: 50px;
+    max-width: 9000px;
+     margin-left: 350px;
+     margin-right: 10px;
+}
+section {
+    margin-bottom: 50px;
+    border-radius: 20px;
+    padding: 15px;
+}
+section div{
+  align-items: right;
+  border-radius: 20px;
+  margin-left: 450pX;
+  
+  
+}
+ 
+section:hover{
+    background:	#D3D3D3 ;
+}
+.table{
+    height: 400px;
+    width: 400px;
+
+}
+section article{
+    font-size:14px;
+    display:flex;
+    flex-direction: column;
+    gap:20px;
+}
+section h2{
+    padding-bottom: 10px;
+    font-size: 25px;
+    font-weight: 400px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+section article ul{
+    margin-left: 30px;
+}
+section article ul li{
+    margin-bottom: 20px;
+}
+section article dl dt{
+ 
+    margin-bottom: 10px;
+}
+section article dl dd{
+    margin-left: 100px;
+    margin-bottom: 10px;
+}
+font{
+    font-size: 20px;
+    color: blue ;
+}
+.image{
+    height: 300px;
+    width: 500px;
+    margin-left: 150px;
+}
+@media (max-width: 480px){
+    body{
+        flex-direction: column;
+    }
+    header{
+        height: 200px;
+        overflow: hidden;
+        overflow-y: scroll;
+    }
+}
+footer{
+  background-color: lightpink;
+   
+}
+</style>
+      <script>
+        function light(){
+          document.getElementById("container").style.backgroundColor="white";
+          document.getElementById("container").style.color="black";
+        }
+
+        function dark(){
+          document.getElementById("container").style.backgroundColor="black";
+          document.getElementById("container").style.color="white";
+        }
+      </script>
+</head>
+<body id="container">
+  
+       <header  >
+        <nav>
+          <div > 
+            <h1>
+                HTML TUTORIAL
+            </h1>
+          </div>   
+            <ul >
+                <a href="#INTRODUCTION" >
+                <li>
+                    INTRODUCTION
+                </li>
+               </a>
+              <a href="#ELEMENT AND TAG">
+                <li>ELEMENT AND TAG</li>
+              </a> 
+              <a href="#HTML page structure">
+                <li>HTML PAGE STRUCTURE</li>
+              </a> 
+              <a href="#FEATURES OF HTML: ">
+                <li>FEATURES OF HTML </li>
+              </a> 
+              <a href="#WHY LEARN HTML? ">
+                <li>WHY LEARN  HTML? </li>
+              </a> 
+              <a href="# ADVANTAGES">
+                <li>ADVANTAGES </li>
+              </a> 
+              <a href="#DISADVANTAGES">
+                <li>DISADVANTAGES</li>
+              </a> 
+              <a href="#contact as">
+                <li>contact </li>
+              </a>  
+
+            </ul>
+        </nav>
+       </header>
+       <main>
+        <section id="INTRODUCTION">
+          <div class="toggle-container" >
+            <div id="moon" class="icon" onclick="light()">🌙</div>
+            <div id="sun" class="icon" onclick="dark()">☀</div>
+        </div>
+             <h2>INTRODUCTION</h2>
+             <article>
+
+                <P>
+                    HTML stands for HyperText Markup Language. It is used to design web pages using a markup language. HTML is a 
+                    combination of Hypertext and Markup language. Hypertext defines the link between web pages. A markup language
+                     is used to define the text document within the tag which defines the structure of web pages. This language is
+                     used to annotate (make notes for the computer) text so that a machine can understand it and manipulate text
+                      accordingly. Most markup languages (e.g. HTML) are human-readable. The language uses tags to define what
+                       manipulation has to be done on the text. 
+                </P>
+                <img class="image"src="HTML.1.jpeg"> 
+                <p>
+                    HTML is a markup language used by the browser to manipulate text, images, and other content, in order to display
+                     it in the required format. HTML was created by Tim Berners-Lee in 1991. The first-ever version of HTML was HTML
+                      1.0, but the first standard version was HTML 2.0, published in 1995.
+                </p>
+                <img class="image" src="HTML2.png">
+             </article>
+        </section>
+        <section id="ELEMENT AND TAG">
+            <h2>ELEMENT AND TAG</h2>
+            <article>
+                <p>
+                    HTML uses predefined tags and elements which tell the browser how to properly display the content. Remember to 
+                    include closing tags. If omitted, the browser applies the effect of the opening tag until the end of the page.
+                </p>
+                <table> 
+                  <tr> 
+                    <td> 
+                <img  class="table" src=" html3.jpg">
+              </td>
+              <td> 
+                <img class="table" src=" html4.jpg">
+              </td>
+                  </tr>
+                  <tr> 
+                    <td>
+                <img class="table" src=" html5.jpg">
+              </td>
+              <td>
+                <img class="table" src="html6.jpg">
+              </td>
+              </tr>
+              </table>
+            </article>
+        </section>
+        <section id="HTML page structure">  
+            <h2>HTML PAGE STRUCTURE</h2>
+            <article>
+                     <p>
+                        The basic structure of an HTML page is laid out below. It contains the essential building-block elements 
+                        (i.e. doctype declaration, HTML, head, title, and body elements) upon which all web pages are created.
+                     </p>
+                     <img class="image"  src="html7.png">
+                      
+            </article>
+        </section>
+        <section id="FEATURES OF HTML:">
+          <h2>FEATURES OF HTML:</h2>
+          <article>
+            <ul>
+              <li>It is easy to learn and easy to use.</li>
+              <li>It is platform-independent.</li>
+              <li>Images, videos, and audio can be added to a web page.</li>
+              <li>Hypertext can be added to the text.</li>
+              <li>It is a markup language.</li>
+            </ul>
+
+          </article>
+        </section>
+        <section id="WHY LEARN HTML? ">
+          <h2>WHY LEARN HTML?</h2>
+          <article>
+            <ul>
+              <li>It is a simple markup language. Its implementation is easy.</li>
+              <li>It is used to create a website.</li>
+              <li>Helps in developing fundamentals about web programming.</li>
+              <li>Boost professional career.</li>
+            </ul>
+          </article>
+        </section>
+        <section id=" ADVANTAGES">
+          <h2> ADVANTAGES:</h2>
+          <article>
+            <dl>
+              <dt><font>  1.Lightweight Structure:</font></dt>
+               <dd>-HTML is lightweight, making it efficient for transmitting over the internet.
+              </dd>
+               <dd>-It doesn’t burden the server or slow down page loading.
+              </dd>
+              <dt><font> 2.Easy to Learn and Use:</font>
+              </dt>
+              <dd>-HTML has a simple syntax, making it accessible for beginners.
+              </dd>
+              <dd>-A programmer can create an HTML file using a basic text editor and execute it in a browser.
+              </dd>
+              <dt><font>3.Universal Browser Support:</font></dt>
+               <dd>-Every browser supports HTML, ensuring consistent rendering across different platforms.
+              </dd>
+              <dt><font>4.Integration with Other Languages:</font>
+              </dt>
+              <dd>-HTML integrates seamlessly with other languages like JavaScript and CSS.
+              </dd>
+               <dd>-This allows developers to create dynamic and interactive web pages.
+              </dd>
+              <dt><font>5.User-Friendly:</font>
+              </dt>
+              <dd>-HTML allows changes at any time. You can edit and update content without much hassle.
+              </dd>
+              <dt><font>6.SEO-Friendly:</font>
+              </dt>
+              <dd>-Search engines understand HTML well, improving your site’s visibility.
+              </dd>
+               <dd>-Properly structured HTML enhances search engine rankings.
+              </dd>
+              <dt><font>7.Platform Independence:</font>
+              </dt>
+              <dd>-HTML is platform-independent and works on Windows, Linux, Macintosh, and more.
+              </dd>
+              <dt><font>8.Support for Templates:</font>
+              </dt>
+              <dd>-HTML allows the use of templates, simplifying webpage design.
+              </dd>
+              <dd>-Designers can create consistent layouts by reusing templates.
+              </dd>
+              <dt><font>9.Fast Download Speed:</font>
+              </dt>
+              <dd>-Text-based HTML files are compressible, leading to faster download times.
+              </dd>
+               
+              <dt><font>10.Widely Used:</font>
+              </dt>
+              <dd>-HTML is the standard markup language for web documents.
+              </dd>
+              <dd>-It forms the backbone of almost every website.</dd>
+            </dl>
+
+          </article>
+        </section>
+        <section id="DISADVANTAGES">
+          <h2>DISADVANTAGES:</h>
+          <article>
+            <dl>
+               <dt><font>1.Static Nature:</font>
+              </dt>
+               <dd>-HTML is a static language, meaning it cannot produce dynamic output on its own.
+              </dd>
+               <dd>-Interactivity and real-time updates require additional technologies like JavaScript.
+              </dd>
+               <dt><font>2.Complex Structure:</font>
+              </dt>
+               <dd>-Understanding the structure of HTML documents can be challenging, especially for beginners.
+              </dd>
+               <dd>-Errors in the document structure can lead to unexpected rendering issues.
+              </dd>
+               <dt><font>3.Costly Errors:</font>
+              </dt>
+               <dd>-Mistakes in HTML code can be costly in terms of time and effort.
+              </dd>
+               <dd>-Debugging and fixing errors can slow down development.
+              </dd>
+               <dt><font>4.Time-Consuming:</font>
+              </dt>
+               <dd>-Creating and maintaining color schemes, lists, tables, and forms in HTML can be time-consuming.
+              </dd>
+               <dd>-Writing extensive code for simple webpages can be inefficient.
+              </dd>
+               <dt><font>5.Compatibility Issues:</font>
+              </dt>
+               <dd>-While HTML is widely supported, browser compatibility can still be an issue.
+              </dd>
+               <dd>-Developers need to ensure cross-browser compatibility for consistent rendering.
+              </dd>
+               <dt><font>6.Limited Security Features:</font>
+              </dt>
+               <dd>-HTML security features are limited.
+              </dd>
+               <dd>-For robust security, additional measures (such as server-side validation) are necessary.
+              </dd>
+               <dt><font>7.Lack of Aesthetics:</font>
+              </dt>
+               <dd>-HTML alone cannot render content in an aesthetically pleasing way.
+              </dd>
+               <dd>-Styling and layout require CSS (Cascading Style Sheets).
+              </dd>
+               <dt><font>8.Dependency on Deprecated Tags:</font>
+              </dt>
+               <dd>-Some HTML tags become deprecated over time.
+              </dd>
+               <dd>-Developers must avoid using outdated tags and adopt modern alternatives.
+              </dd>
+               <dt><font>9.Static and Plain Pages:</font>
+              </dt>
+               <dd>-HTML generates static and plain pages.
+              </dd>
+               <dd>-For dynamic content, other technologies (like server-side scripting) are essential.
+              </dd>
+              <dt><font>10.Code Complexity:</font>
+              </dt>
+              <dd>-Writing long code for complex webpages can lead to complexity.
+              </dd>
+              <dd>     - Balancing simplicity and functionality is crucial.</dd>
+            </dl>
+          </article>
+        </section>
+        
+ <section id="contact as">
+  <h2>contact :</h2>
+        <h3>NAME-NANDANI CHAUDHARI</h3>
+        <br>
+        <h3>EMAIL-<a href="#">nandu@gmail.com</a></h3>
+        <h3>MOBILE NUMBER:<a href="#">9329XXXXXX</a></h3>
+ </section>
+</main>
+       <script src="js/docu.js"></script>
+</body>
+</html>
